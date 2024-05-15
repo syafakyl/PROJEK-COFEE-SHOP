@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link href="images/resto.png" rel="icon">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height: 100vh;
+            background-image: url(images/backGround.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .div1 {
+            width: 350px;
+            margin: auto;
+            margin: 10 0 450px;
+            overflow: hidden;
+            padding: 75px;
+            background: transparent;
+        }
+
+        h2 {
+            text-align: center;
+            padding: 10px;
+            color: black;
+        }
+
+        label {
+            color: black;
+            padding-left: 10px;
+        }
+
+        .inputText {
+            width: 300px;
+            height: 30px;
+            border: none;
+            border-radius: 2px;
+            padding-left: 12px;
+        }
+
+        #regButton {
+            background-color: black;
+            width: 315px;
+            height: 30px;
+            border: none;
+            border-radius: 10px;
+            padding-left: 7px;
+            color: white;
+            font-size: 16px;
+        }
+
+        a {
+            color: blue;
+        }
+
+        p {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <div class="div1">
+        <form name="registerForm" method="post">
+            <label>User Name</label>
+            <input type="text" name="Uname" class="inputText" placeholder="User Name" required>
+            <br><br>
+            <label>Password</label>
+            <input type="password" name="Pass" class="inputText" placeholder="Password" required>
+            <br><br>
+            <input type="button" name="Register" id="regButton" value="Register" onclick="registerUser(event)">
+        </form>
+        <p>Already have an account?<a href="index.html">Login Here!</a> </p>
+    </div>
+
+    <script>
+        function registerUser(event) {
+            event.preventDefault();
+
+            var username = document.forms["registerForm"]["Uname"].value;
+            var password = document.forms["registerForm"]["Pass"].value;
+
+            var newUser = { username: username, password: password };
+
+            // Mengambil data pengguna yang terdaftar dari localStorage
+            var users = JSON.parse(localStorage.getItem("users")) || [];
+
+            // Menambahkan pengguna baru ke dalam daftar pengguna
+            users.push(newUser);
+
+            // Menyimpan daftar pengguna yang telah diperbarui ke dalam localStorage
+            localStorage.setItem("users", JSON.stringify(users));
+
+            alert("Registration successful! You can now login.");
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

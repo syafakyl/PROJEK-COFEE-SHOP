@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login User</title>
+    <link href="images/resto.png" rel="icon">
+
+    <script>
+        function myFunction(event) {
+            event.preventDefault();
+
+            var un = document.forms["myForm"]["Uname"].value;
+            var pw = document.forms["myForm"]["Pass"].value;
+
+            // Daftar username dan password yang valid
+            var validUsers = JSON.parse(localStorage.getItem("users")) || [];
+
+            var isValidUser = false;
+
+            for (var i = 0; i < validUsers.length; i++) {
+                if (un === validUsers[i].username && pw === validUsers[i].password) {
+                    isValidUser = true;
+                    break;
+                }
+            }
+
+            if (isValidUser) {
+                alert("Login Success!!");
+
+                // Simpan username ke dalam localStorage
+                localStorage.setItem("username", un);
+
+                window.location.href = "Coffeshop.html";
+            } else {
+                alert("Invalid Username or Password!!");
+            }
+        }
+    </script>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height: 100vh;
+            background-image: url(images/backGround.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .div1 {
+            width: 350px;
+            margin: auto;
+            margin: 10 0 450px;
+            overflow: hidden;
+            padding: 75px;
+            background: transparent;
+        }
+
+        h2 {
+            text-align: center;
+            padding: 20px;
+            color: black;
+        }
+
+        label {
+            color: black;
+            padding-left: 20px;
+        }
+
+        .inputText {
+            width: 300px;
+            height: 30px;
+            border: none;
+            border-radius: 2px;
+            padding-left: 12px;
+        }
+
+        #logButton {
+            background-color: black;
+            width: 315px;
+            height: 30px;
+            border: none;
+            border-radius: 10px;
+            padding-left: 7px;
+            color: white;
+            font-size: 16px;
+        }
+        a {
+            color: blue;
+        }
+        p {
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Login Form</h2>
+    <div class="div1">
+        <form name="myForm" method="post">
+            <label>User Name</label>
+            <input type="text" name="Uname" class="inputText" placeholder="User Name">
+            <br><br>
+            <label>Password</label>
+            <input type="password" name="Pass" class="inputText" placeholder="Password">
+            <br><br>
+            <input type="button" name="Login" id="logButton" value="Login" onclick="myFunction(event)">
+        </form>
+        <p>Don't have an account?<a href="regist.html">Regist Here!</a> </p>
+    </div>
+
+    <script>
+        // Set nilai awal input dengan username yang tersimpan di localStorage
+        var storedUsername = localStorage.getItem("username");
+        if (storedUsername) {
+            document.forms["myForm"]["Uname"].value = storedUsername;
+        }
+    </script>
+</body>
+</html>

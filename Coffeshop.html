@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zicha Coffe Shop</title>
+    <link href="images/icon.png" rel="icon">
+    
+    <!-- swiper link  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- cdn icon link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- custom css file  -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- header section start here  -->
+    <header class="header">
+        <div class="logoContent">
+            <a href="#product" class="logo"><img src="images/resto.png" alt=""></a>
+            <h1 class="logoName">Zicha Coffe Shop </h1>
+        </div>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#product">product</a>
+            <a href="#blogs">blogs</a>
+            <a href="#review">review</a>
+            <a href="#contact">contact</a>
+        </nav>
+        <div class="icon">
+            <i class="fas fa-search" id="search"></i>
+            <i class="fas fa-shopping-cart"></i>
+            <i class="fas fa-bars" id="menu-bar"></i> 
+        </div>
+        <div class="search">
+            <input type="search" placeholder="search...">
+        </div>
+    </header>
+    <!-- header section end here  -->
+
+    <!-- home section start here  -->
+    <section class="home" id="home">
+        <div class="homeContent">
+            <h2>Zicha Coffe Shop </h2>
+            <p>a place that provides various types of coffee and other non-alcoholic drinks in a relaxed atmosphere,
+            a comfortable place, and is equipped with music, either through a player or live music, provides television and reading, distinctive interior design</p>
+            <div class="home-btn">
+                <a href="http://repository.unpas.ac.id/43713/3/BAB%20I.pdf"><button>see more</button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- home section end here  -->
+
+    <!-- product section start here  -->
+    <section class="product" id="product">
+        <div class="heading">
+            <h2>Our Exclusive Products</h2>
+        </div>
+        <div class="swiper product-row">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="images/air minum.png" alt="">
+                    </div>
+                    <div class="product-content">
+                        <h3>Mineral Water</h3>
+                        <p>Rp. 10000
+                        </p>
+                        <div class="orderNow">
+                            <button onclick="window.location.href= 'cart.html'">Order Now </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="images/americano.png" alt="">
+                    </div>
+                    <div class="product-content">
+                        <h3>Americano</h3>
+                        <p>Rp. 20000
+                        </p>
+                        <div class="orderNow">
+                            <button onclick="window.location.href= 'cart.html'">Order Now </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="images/capucino.png" alt="">
+                    </div>
+                    <div class="product-content">
+                        <h3>Capuccino</h3>
+                        <p>Rp. 25000
+                        </p>
+                        <div class="orderNow">
+                            <button onclick="window.location.href= 'cart.html'">Order Now </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="img">
+                        <img src="images/vanila latte.png" alt="">
+                    </div>
+                    <div class="product-content">
+                        <h3>Vanilla Latte</h3>
+                        <p>Rp. 28000
+                        </p>
+                        <div class="orderNow">
+                            <button onclick="window.location.href= 'cart.html'">Order Now </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelector('.fa-shopping-cart').addEventListener('click', function() {
+          window.location.href = 'cart.html';
+        });
+      </script>
+
+    <!-- product section end here  -->
+
+    <!-- blogs section start here  -->
+    <section class="blogs" id="blogs">
+
+        <div class=" swiper blogs-row">
+            <div class="swiper-wrapper">
+                <div class=" swiper-slide box">
+                    <div class="img">
+                        <img src="images/copi bun.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Coffe Bun</h3>
+                        <p>Coffee bun is one of the most popular contemporary foods and is in great demand by the public. As the name implies, this is a bread snack made with a distinctive coffee aroma. Besides having a strong coffee aroma, this bread also has a sweet and legit taste.</p>
+                        <p>Usually this coffee bun is served in many cafes as a companion for a cup of tea or coffee.</p>
+                        <a href="#product" class="btn">learn more</a>
+                    </div>
+                </div>
+                <div class=" swiper-slide box">
+                    <div class="img">
+                        <img src="images/capucino.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Capuccino</h3>
+                        <p>Cappuccino is a cup of milk coffee that originates from Italy and has been present in Europe and America since the 1980s. The taste of cappuccino coffee is generally very rich, even though it has been mixed with milk, the coffee taste is still strong.</p>
+                        <p>Cappuccino is a typical Italian drink consisting of 1/3 espresso, 1/3 steamed milk and 1/3 milk froth.</p>
+                        <a href="#product" class="btn">learn more</a>
+                    </div>
+                </div>
+                <div class=" swiper-slide box">
+                    <div class="img">
+                        <img src="images/spaghetti.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Spaghetti </h3>
+                        <p>Spaghetti is a type of pasta that is long, thin, cylindrical, and dense, which, if you pay attention, resembles noodles in general. It is a staple in traditional Italian cooking. Because it is shaped like noodles, most people call it noodles from Italy, although many other pasta variants are shaped like noodles.</p>
+                        <p>Like pasta in general, spaghetti is made from ground wheat and water. Italian spaghetti is made from durum wheat semolina, but elsewhere it can be made with other types of flour.</p>
+                        <a href="#product" class="btn">learn more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+
+
+        </div>
+    </section>
+
+    <!-- blogs section ends here  -->
+    
+    <!-- newsletter section start here  -->
+    <section class="newsletter">
+        <form action="">
+            <h3>subscribe for more update</h3>
+            <input type="email" name="" placeholder="enter your email" id="" class="box">
+            <input type="button" value="subscribe" class="box2">
+        </form>
+    </section>
+    <!-- newsletter section ends here  -->
+
+    <!-- review section start here  -->
+    <section class="review" id="review">
+        <div class="heading">
+            <h2>Customer Review</h2>
+        </div>
+        <div class=" swiper review-row">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <div class="client-review">
+                        <p>the food is very good and price is affordable</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="img">
+                            <img src="images/man1.png" alt="">
+                        </div>
+                        <div class="clientDetailed">
+                            <h3>Rian Miosy</h3>
+                            <p>Student</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="client-review">
+                        <p>the service is very good and quickly handled</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="img">
+                            <img src="images/women1.png" alt="">
+                        </div>
+                        <div class="clientDetailed">
+                            <h3>Riva Dwi</h3>
+                            <p>Worker</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="client-review">
+                        <p>The place and facilities are very adequate</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="img">
+                            <img src="images/man2.png" alt="">
+                        </div>
+                        <div class="clientDetailed">
+                            <h3>Iqbal Rahmatullah</h3>
+                            <p>Bussiness Man</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="client-review">
+                        <p>the location of the store is very strategic</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="img">
+                            <img src="images/women2.png" alt="">
+                        </div>
+                        <div class="clientDetailed">
+                            <h3>Syafa Kayla</h3>
+                            <p>accountant</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+
+            </div>
+        </div>
+    </section>
+    <!-- review section ends here  -->
+
+    <!-- footer section start here  -->
+    <footer class="footer" id="contact">
+        <div class="box-container">
+            <div class="mainBox">
+                <div class="content">
+                    <a href="#"><img src="images/resto.png" alt=""></a>
+                </div>
+                <h1 class="logoName"> Zicha Coffe Shop </h1>
+                <p>Zicha Coffeeshop is located on Jalan Soekarno Hatta No. 15, South Jakarta</p>
+
+            </div>
+            <div class="box">
+                <h3>Quick link</h3>
+                <a href="#home"> <i class="fas fa-arrow-right"></i>Home</a>
+                <a href="#product"> <i class="fas fa-arrow-right"></i>product</a>
+                <a href="#blogs"> <i class="fas fa-arrow-right"></i>blogs</a>
+                <a href="#review"> <i class="fas fa-arrow-right"></i>review</a>
+                <a href="#contact"> <i class="fas fa-arrow-right"></i>contact</a>
+
+            </div>
+            <div class="box">
+                <h3>Extra link</h3>
+                <a href="#home"> <i class="fas fa-arrow-right"></i>More About</a>
+                <a href="#product"> <i class="fas fa-arrow-right"></i>order item</a>
+                <a href="#review"> <i class="fas fa-arrow-right"></i>Testimoni</a>
+                <a href="cart.html"> <i class="fas fa-arrow-right"></i>Cart</a>
+                <a href="https://wa.me/+6289637147405"> <i class="fas fa-arrow-right"></i>our  services</a>
+            </div>
+            <div class="box">
+                <h3>Contact Info</h3>
+                <a href="https://wa.me/+6289637147405"> <i class="fas fa-phone"></i>+62 896 3714 7405</a>
+                <a href="https://www.gmail.com"> <i class="fas fa-envelope"></i>iqbalrahmat27@gmail.com</a>
+
+            </div>
+
+        </div>
+        <div class="share">
+            <a href="https://www.facebook.com/profile.php?id=100086732266505&viewas=&show_switched_toast=false&show_switched_tooltip=false&is_tour_dismissed=false&is_tour_completed=false&show_podcast_settings=false&show_community_review_changes=false&should_open_composer=false&badge_type=NEW_MEMBER&show_community_rollback_toast=false&show_community_rollback=false&show_follower_visibility_disclosure=false&bypass_exit_warning=true" class="fab fa-facebook-f"></a>
+            <a href="https://twitter.com/ibaal27" class="fab fa-twitter"></a>
+            <a href="https://www.instagram.com/iqbalrhmtlh" class="fab fa-instagram"></a>
+            <a href="https://www.linkedin.com/feed/" class="fab fa-linkedin"></a>
+        </div>
+        <div class="credit">
+            created by <span>Group 4 Web Development</span>
+        </div>
+    </footer>
+    <!-- swiper js link  -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- custom js file  -->
+    <script src="index.js"></script>
+</body>
+</html>

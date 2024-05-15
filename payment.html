@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment ZichaCoffeshop</title>
+  <link href="images/iconcart.png" rel="icon">
+  <link rel="stylesheet" type="text/css" href="payment.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logoContent">
+      <a href="#product" class="logo"><img src="images/resto.png" alt=""></a>
+      <h1 class="logoName">Zicha Coffe Shop </h1>
+    </div>
+
+    <nav class="navbar">
+      <a href="Coffeshop.html#home">home</a>
+      <a href="Coffeshop.html#product">product</a>
+      <a href="Coffeshop.html#blogs">blogs</a>
+      <a href="Coffeshop.html#review">review</a>
+      <a href="Coffeshop.html#contact">contact</a>
+    </nav>
+
+    <div class="icon">
+      <i class="fas fa-search" id="search"></i>
+      <i class="fas fa-bars" id="menu-bar"></i> 
+    </div>
+
+    <div class="search">
+      <input type="search" placeholder="search...">
+    </div>
+  </header>
+  <form id="paymentForm" onsubmit="processPayment(event)">
+    <div>
+      <label for="name">Nama:</label>
+      <input type="text" id="name" required>
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+    </div>
+    <div>
+      <label for="address">No Telepon:</label>
+      <input type="text" id="address" required>
+    </div>
+    <div>
+      <label for="address">Total Belanja</label>
+      <input type="text" id="total" required>
+    </div>
+    <div>
+      <label for="paymentMethod">Metode Pembayaran:</label>
+      <select id="paymentMethod" onchange="toggleQRCode()" required>
+        <option value="">Pilih Metode Pembayaran</option>
+        <option value="cash">Cash</option>
+        <option value="gopay">GoPay</option>
+        <option value="dana">Dana</option>
+      </select>
+    </div>
+    <div id="qrCodeContainer" class="hidden">
+      <img id="qrCode" alt="QR Code">
+    </div>
+    <div class="button-container">
+      <button onclick="kembali()" id="KembaliButton">Kembali</button>
+      <button type="submit">Bayar</button>
+      <button onclick="logout()" id="logoutButton">Logout</button>
+    </div>
+  </form>
+  <div id="paymentResult"></div>
+
+  <footer class="footer" id="contact">
+    <div class="box-container">
+        <div class="mainBox">
+            <div class="content">
+                <a href="#"><img src="images/resto.png" alt=""></a>
+            </div>
+            <h1 class="logoName"> Zicha Coffe Shop </h1>
+            <p>Zicha Coffeeshop is located on Jalan Soekarno Hatta No. 15, South Jakarta</p>
+
+        </div>
+        <div class="box">
+            <h3>Quick link</h3>
+            <a href="Coffeshop.html#home"> <i class="fas fa-arrow-right"></i>Home</a>
+            <a href="Coffeshop.html#product"> <i class="fas fa-arrow-right"></i>product</a>
+            <a href="Coffeshop.html#blogs"> <i class="fas fa-arrow-right"></i>blogs</a>
+            <a href="Coffeshop.html#review"> <i class="fas fa-arrow-right"></i>review</a>
+            <a href="Coffeshop.html#contact"> <i class="fas fa-arrow-right"></i>contact</a>
+
+        </div>
+        <div class="box">
+            <h3>Extra link</h3>
+            <a href="Coffeshop.html#home"> <i class="fas fa-arrow-right"></i>More About</a>
+            <a href="Coffeshop.html#product"> <i class="fas fa-arrow-right"></i>order item</a>
+            <a href="Coffeshop.html#review"> <i class="fas fa-arrow-right"></i>Testimoni</a>
+            <a href="cart.html"> <i class="fas fa-arrow-right"></i>Cart</a>
+            <a href="https://wa.me/+6289637147405"> <i class="fas fa-arrow-right"></i>our  services</a>
+        </div>
+        <div class="box">
+            <h3>Contact Info</h3>
+            <a href="https://wa.me/+6289637147405"> <i class="fas fa-phone"></i>+62 896 3714 7405</a>
+            <a href="https://www.gmail.com"> <i class="fas fa-envelope"></i>iqbalrahmat27@gmail.com</a>
+
+        </div>
+
+    </div>
+    <div class="share">
+        <a href="https://www.facebook.com/profile.php?id=100086732266505&viewas=&show_switched_toast=false&show_switched_tooltip=false&is_tour_dismissed=false&is_tour_completed=false&show_podcast_settings=false&show_community_review_changes=false&should_open_composer=false&badge_type=NEW_MEMBER&show_community_rollback_toast=false&show_community_rollback=false&show_follower_visibility_disclosure=false&bypass_exit_warning=true" class="fab fa-facebook-f"></a>
+        <a href="https://twitter.com/ibaal27" class="fab fa-twitter"></a>
+        <a href="https://www.instagram.com/iqbalrhmtlh" class="fab fa-instagram"></a>
+        <a href="https://www.linkedin.com/feed/" class="fab fa-linkedin"></a>
+    </div>
+    <div class="credit">
+        created by <span>Group 4 Web Development</span>
+    </div>
+</footer>
+  <script src="payment.js"></script>
+</body>
+</html>
+
